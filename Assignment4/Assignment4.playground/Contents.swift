@@ -6,16 +6,29 @@ import Foundation
 //1.Enum- differnt types, functions and properties in enums
 //Create an enum for the four seasons and print a message for each.
 
-enum season{
+enum Season{
     case spring
     case summer
     case fall
     case winter
 }
-print(season.spring)
-print(season.summer)
-print(season.fall)
-print(season.winter)
+print(Season.spring)
+print(Season.summer)
+print(Season.fall)
+print(Season.winter)
+
+enum Season2{
+    case spring, summer, fall, winter
+    var message: String {
+        switch self {
+        case .spring: return "Spring is coming soon!"
+        case .summer: return "Summer is hot!"
+        case .fall: return "Fall is beautiful!"
+        case .winter: return "Winter is cold!"
+        }
+    }
+}
+print(Season2.summer.message)
 
 // Define an enum LoginState with cases loggedIn(user: String) and loggedOut.
 
