@@ -46,6 +46,13 @@ enum HTTPMethod: String{
     case head = "HEAD"
     case options = "OPTIONS"
 }
+enum MyValues: Int{
+    case a = 1
+    case b = 100
+    case c
+}
+print(MyValues.c.rawValue)
+
 // Add a computed property to an enum Planet returning its order from the sun.
 enum Planet{
     case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
@@ -63,6 +70,7 @@ enum Planet{
     }
 }
 
+print(Planet.jupiter.orderFromSun)
 
 // Iterate over all cases of an enum TransportMode using CaseIterable.
 enum TransportMode: String, CaseIterable{
@@ -85,9 +93,9 @@ class Car{
     var make: String
     var model: String
     
-    init(make: String, model: String){
-        self.make = make
-        self.model = model
+    init(ma: String, mod: String){
+        self.make = ma
+        self.model = mod
     }
     
     func drive(){
@@ -103,6 +111,10 @@ class Person{
         self.name = name
         self.age = age
     }
+    func description(){
+        print("\(name) is \(age)")
+    }
+    
 }
 
 class Empolyee: Person{
@@ -111,7 +123,13 @@ class Empolyee: Person{
         self.employeeID = employeeID
         super.init(name: name, age: age)
     }
+    override func description(){
+        print("\(name) is \(age), Id is \(employeeID)")
+    }
+    
 }
+var emp = Empolyee(name: "Jin", age: 30, employeeID: 2)
+print(emp.description())
 
 
 // Implement a class BankAccount with deposit and withdraw methods.
@@ -211,3 +229,6 @@ struct Vector2D{
         
     }
 }
+
+var x: Drivable = Car()
+var arr: [Drivable] = [Car(), Motorcyle()]
