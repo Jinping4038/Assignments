@@ -6,6 +6,14 @@ import Foundation
  blueprint of methods/functions or variables
  Protocols when confirmed over classes,structs, enums, then they need to provide implemantaion for it
  basically they are the contract which needs to be followed by whoever adopts it
+ 
+ protocol inheritance
+ protocol composition: codeable
+ protocol extension
+ 
+ can protocol store data?
+ 
+ 
  */
 
 

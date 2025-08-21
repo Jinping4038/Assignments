@@ -13,6 +13,8 @@ import Foundation
  (Only created when accessed the first time, then stored.
  Declared with lazy var. Must be var (cannot be let).)
  Useful for expensive operations (e.g., loading a file, network request).
+ 
+ static
  */
 
 

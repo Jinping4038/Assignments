@@ -6,6 +6,11 @@ import Foundation
  Extensions - it means adding new functionality to exsisting classes, structs or data types
  
  //O- open for extension but closed for modifications
+  benefit?
+ can extension store property?
+ no,doesn't have any memory
+
+ 
  */
 extension Int{
     func squareNumber()-> Int{
