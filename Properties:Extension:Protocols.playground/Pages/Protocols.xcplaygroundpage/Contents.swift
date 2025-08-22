@@ -135,3 +135,28 @@ class ApiImpl2: Api {
         return users
     }
 }
+
+
+protocol API {
+    associatedtype T
+    func getData() -> T
+    func getData2() -> T
+}
+
+class StringAPI: API {
+    func getData() -> String {
+        return ""
+    }
+    func getData2() -> String {
+        return "3"
+    }
+}
+
+class IntAPI: API {
+    func getData() -> Int {
+        return 0
+    }
+    func getData2() -> Int {
+        return 3
+    }
+}
